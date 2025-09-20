@@ -1625,9 +1625,283 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+Home\Bureau\Portfolio\assets\css\main.css */
+/* Code Block Styling - Enhanced and Colorful */
+.code-container {
+  background-color: #272822;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  margin-bottom: 30px;
+  font-family: 'Source Code Pro', monospace;
+  position: relative;
+  border: 1px solid #3e3d32;
+}
+
+.code-header {
+  background: linear-gradient(135deg, #4a148c, #311b92);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 2px solid #7e57c2;
+}
+
+.code-title {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.code-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.code-copy-btn {
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.code-copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.code-block {
+  margin: 0;
+  padding: 25px;
+  overflow-x: auto;
+  line-height: 1.6;
+  font-size: 15px;
+  background-color: #272822;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Custom Python Syntax Highlighting */
+.language-python {
+  color: #f8f8f2;
+}
+
+.language-python .comment {
+  color: #88846f;
+}
+
+.language-python .keyword {
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+.language-python .function {
+  color: #66d9ef;
+}
+
+.language-python .string {
+  color: #a6e22e;
+}
+
+.language-python .number {
+  color: #fd971f;
+}
+
+.language-python .operator {
+  color: #ff79c6;
+}
+
+.language-python .punctuation {
+  color: #f8f8f2;
+}
+
+.language-python .class-name {
+  color: #a6e22e;
+  font-weight: bold;
+}
+
+.language-python .builtin {
+  color: #66d9ef;
+}
+
+/* Line number styling */
+.code-block {
+  counter-reset: line;
+}
+
+.code-block code {
+  position: relative;
+  padding-left: 3.8em;
+  display: block;
+}
+
+.code-block code::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 2.5em;
+  padding-right: 1em;
+  text-align: right;
+  color: #75715e;
+  border-right: 1px solid #3e3d32;
+}
+
+/* Add subtle animation */
+.code-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.code-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .code-block {
+    font-size: 13px;
+    padding: 15px 10px 15px 0;
+  }
+  
+  .code-block code {
+    padding-left: 3em;
+  }
+  
+  .code-block code::before {
+    width: 2em;
+  }
+}
+/* Feature list styling */
+.feature-list {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.feature-list li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 2rem;
+  transition: transform 0.2s;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+}
+
+.feature-list li i {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #7e57c2;
+}
+/* Simple Explanation Block */
+.explanation-block {
+  background-color: #f8f9fa;
+  border-left: 4px solid #673ab7;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.explanation-title {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.explanation-subtitle {
+  color: #683ab768;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.explanation-text {
+  color: #414141;
+  font-size: 1.2rem !important;  /* Increased from 2rem */
+  line-height: 1.4;   /* Adjusted line height for better readability */
+  margin-bottom: 0;
+  font-weight: 400; 
+}
+
+/* Additional responsive fixes */
+@media (max-width: 768px) {
+  .code-block {
+    font-size: 13px;
+    padding: 15px 10px 15px 0;
+  }
+  
+  .code-block code {
+    padding-left: 3em;
+  }
+  
+  .explanation-block {
+    padding: 20px;
+  }
+  
+  .explanation-title {
+    font-size: 1.4rem;
+  }
+  
+  .explanation-subtitle {
+    font-size: 1rem;
+  }
+  
+  .code-header {
+    padding: 10px 15px;
+  }
+  
+  .code-title {
+    font-size: 0.9rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+}
+/* Full-width image styling */
+.explanation-image-fullwidth {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 80%;
+}
+
+.explanation-image-fullwidth img {
+  width: 90;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.explanation-image-fullwidth:hover img {
+  transform: scale(1.02);
+}
+
+.explanation-image-fullwidth .image-caption {
+  background: rgba(104, 58, 183, 0.356);
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  position: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .explanation-text {
+    font-size: 1.8rem;  /* Slightly smaller on mobile but still large */
+  }
 }

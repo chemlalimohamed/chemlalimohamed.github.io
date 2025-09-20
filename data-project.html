@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Stock analysis & comparison using Python</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">~/Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="./index.html">Home<br></a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Stock analysis & comparison using Python</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Stock analysis & comparison using Python</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            
+            <h4>Description</h4>
+            <p>In this project, I performed a comparative stock analysis of two major companies using Python. I used Pandas for data handling, NumPy for numerical operations, and Matplotlib for visualization to examine recent stock price trends and evaluate each company’s performance relative to the broader market.</p>
+
+            <div class="services-list">
+              <a href="#downloading-data" class="active">Downloading the stocks data via the yfinance API</a>
+              <a href="#descriptive-statistics">Descriptive statistics and visualization of stock prices</a>
+              <a href="#key-statistics">Calculating stock returns, gain and volatility</a>
+              <a href="#beta">Calculating beta values of the stocks compared to that of the market (S&P 500)</a>
+              <a href="#conclusion">Conclusion</a>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <h3>Stock Market Comparison Analysis:</h3>
+            <p>
+              Below is the process I am going to follow for the task of Stock Market Performance Analysis:
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Gather historical stock price data for the companies</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Create relevant features or variables that can help in the comparison</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Apply statistical methods to identify patterns or relationships between the stocks being compared.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Compare the performance of the selected stocks against relevant benchmarks, like the S&P 500.</span></li>
+            </ul>
+            <p>
+              In this project, I set out to analyze and compare the stock market performance of two AI-focused companies that have recently caught my attention: Nvidia, the largest company by market capitalization, and Palantir, an AI-driven decision-making platform that has achieved an impressive 400% stock gain over the past year.
+            </p>
+            <p>
+              <strong>References:</strong>
+            </p>
+            <ol>
+              <li><a href="https://finance.yahoo.com/">Yahoo Finance</a></li>
+              <li><a href="https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/volatility-vol/">Calculating volatility</a></li>
+              <li><a href="https://www.investopedia.com/terms/b/beta.asp">Calculating beta values</a></li>
+            </ol>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+    <section id="service-details" class="service-details section">
+  <div class="container">
+    <div class="row gy-4">
+      
+<section id="downloading-data"></section>
+<div class="explanation-block" >
+  <h3 class="explanation-title">Importing necessary libraries and downloading stock data</h3>
+  <!--<h5 class="explanation-subtitle">Understanding the Stock Analysis Implementation</h5>-->
+  <p class="explanation-text">
+I will begin the Stock Market Comparison Analysis by gathering Apple’s and Google’s stock price data from the previous quarter, using the Yahoo Finance API as the data source.
+  </p>
+</div>
+
+<!-- Replace the existing code block with this -->
+<div class="col-lg-12" data-aos="fade-up">
+  <div class="code-container">
+    <div class="code-header">
+      <span class="code-title">importing the necessary libraries</span>
+    </div>
+    <pre class="code-block"><code class="language-python">import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import yfinance as yf
+import numpy as np</code></pre>
+  </div>
+  
+</div>
+
+<!-- Replace the existing code block with this -->
+<div class="col-lg-12" data-aos="fade-up">
+  <div class="code-container">
+    <div class="code-header">
+      <span class="code-title">Fetching stock data using Yahoo Finance API</span>
+    </div>
+    <pre class="code-block"><code class="language-python">#defining the targeted stocks 
+palantir_ticker = 'PLTR'
+nvidia_ticker = 'NVDA'
+
+#defining the starting & end date 
+start_date = "2025-05-30"
+end_date = "2025-09-15"
+
+#downloading the data using the Yahoo finance API
+palantir_data = yf.download(palantir_ticker, start_date, end_date)
+nvidia_data = yf.download(nvidia_ticker, start_date, end_date)</code></pre>
+  </div>
+  
+</div>
+
+
+
+
+<section id="descriptive-statistics"></section>
+<div class="explanation-block" >
+  <h3 class="explanation-title" >Descriptive statistics and visualization of stock prices</h3>
+  <p class="explanation-text">
+    To better understand the dataset, I first performed an overview of its key characteristics. Specifically, I applied palantir_data.describe() to generate statistical summaries and used palantir_data.dtypes to inspect the column data types, ensuring that no type conversions were required. Finally, I graphed the closing price over the selected period to visualize its behavior.
+  </p>
+  
+  <!-- Full-width image below the text -->
+  <div class="explanation-image-fullwidth">
+    <img src="assets/img/plot_stock_price.png" alt="Stock chart visualization" class="img-fluid rounded">
+  </div>
+</div>
+
+<!-- Replace the existing code block with this -->
+<div class="col-lg-12" data-aos="fade-up">
+  <div class="code-container">
+    <div class="code-header">
+      <span class="code-title">Overview of the dataset & Visualization of closing prices</span>
+    </div>
+    <pre class="code-block"><code class="language-python">#Overview of the dataset
+print(palantir_data.describe(), palantir_data.dtypes)
+
+#Visualizing the closing price of Palantir stock over the selected period
+x_data = palantir_data.index
+plt.figure(figsize=(14, 6))
+plt.plot(x_data, palantir_data["Close"], color="blue", label = "Palantir stock's closing price")
+plt.plot(x_data, nvidia_data["Close"], color="green", label = "Nvidia stock's closing price" )
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))   
+plt.gca().xaxis.set_major_locator(mdates.AutoDateLocator())
+plt.xlabel("Date")
+plt.ylabel("PLTR & NVDA stock price")
+plt.legend(loc="upper left")
+plt.grid(True)
+plt.show()      
+    </code></pre>
+  </div>
+  
+</div>
+
+<section id="key-statistics"></section>
+<div class="explanation-block" >
+  <h3 class="explanation-title" >Calculating daily returns, gain and volatility</h3>
+  <p class="explanation-text">
+    The previously visualized data will serve as the foundation for various financial analyses and comparisons, including the calculation of returns, volatility, and other metrics to evaluate the performance and risk of these stocks.
+  </p>
+  <br>
+  <p class="explanation-text">
+    First, I calculated the daily returns using the pct_change() method to determine the percentage change in Python. Then, I plotted the daily returns using matplot lib against the corresponding dates.
+  </p>
+  <div class="explanation-image-fullwidth">
+    <img src="assets/img/plot_daily_returns.png" alt="Stock chart visualization" class="img-fluid rounded">
+  </div>
+  <br>
+  <p class="explanation-text">
+    One noticeable observation is that Palantir’s stock fluctuates more than Nvidia’s. We can therefore infer that the standard deviation of Palantir’s daily returns is higher, indicating that Palantir’s stock is more volatile (see the definition of volatility). This observation will be confirmed by calculations in the following section.
+  </p>
+  <br>
+  <p class="explanation-text"> 
+    Using NumPy’s std() function, I calculated the volatility of both Palantir’s and Nvidia’s stocks based on their daily returns, and then visualized the results using box plots from Matplotlib.
+  </p>
+
+  <div class="explanation-image-fullwidth">
+    <img src="assets/img/boxplot_volatility.png" alt="Stock chart visualization" class="img-fluid rounded">
+  </div>  
+
+  <br>
+  <p class="explanation-text">
+    Finally, we calculated the overall stock gain and obtained the following results: Palantir <strong>(PLTR) +30.09% </strong>and Nvidia <strong> (NVDA) +31.61%.</strong>
+  </p>
+  
+</div>
+
+<div class="col-lg-12" data-aos="fade-up">
+  <div class="code-container">
+    <div class="code-header">
+      <span class="code-title">Calculating stock returns, gain and volatility</span>
+    </div>
+    <pre class="code-block"><code class="language-python">#Calculating daily returns From the 1st June to 15th September
+palantir_data["Daily_return"] = palantir_data["Close"].pct_change()
+nvidia_data["Daily_return"] = nvidia_data["Close"].pct_change()
+
+#calculating volatility using the standard deviation of daily returns
+volatility_palantir = np.std(palantir_data["Daily_return"])
+volatility_nvidia = np.std(nvidia_data["Daily_return"])
+
+#visualizing volatility using box plots
+volatilities = [volatility_palantir, volatility_nvidia]
+stocks = ["Palantir", "Nvidia"]
+
+plt.figure(figsize=(8, 6))
+plt.bar(stocks, volatilities, color=["blue", "green"])
+plt.ylabel("Volatility")
+plt.title("Stock Volatility Comparison")
+plt.savefig(r"C:\Users\HP\Home\Documents\boxplot_volatility.png")
+plt.show()
+
+#Calculating stock gain using first & last price 
+first_price_stock_pltr, last_price_stock_pltr = palantir_data["Close"].iloc[0].squeeze(),  palantir_data["Close"].iloc[-1].squeeze()
+palantir_stock_gain = ( last_price_stock_pltr / first_price_stock_pltr ) - 1
+
+first_price_stock_nvda, last_price_stock_nvda = nvidia_data["Close"].iloc[0].squeeze(),  nvidia_data["Close"].iloc[-1].squeeze()
+nvidia_stock_gain = ( last_price_stock_nvda / first_price_stock_nvda ) - 1
+
+print( palantir_stock_gain_2,  nvidia_stock_gain_2)</code></pre>
+  </div>
+
+
+  
+</div>
+
+<section id="beta"></section>
+<div class="explanation-block" >
+  <h3 class="explanation-title" >Calculating beta values of the stocks compared to that of the market (S&P 500)</h3>
+  <p class="explanation-text">
+Finally, I calculated the beta values of the two stocks using the S&P 500 as the market benchmark. Beta is a statistical measure that indicates whether a stock is more or less volatile than the market as a whole. It is defined as the covariance between the stock and the market, divided by the variance of the market.
+ </p>
+ <br>
+  <p class="explanation-text">
+To calculate the beta values, I first downloaded the S&P 500 data using the Yahoo Finance
+API, then calculated its daily returns, and finally computed the beta values using the covariance and variance functions from Numpy.
+  </p>
+  <br>
+  <p class="explanation-text">
+The results of the beta calculation showed that Palantir has a beta of approximately <strong> 1.85</strong>, while Nvidia has a beta of about <strong>1.57</strong>. This indicates that both stocks are more volatile than the overall market, with Palantir exhibiting higher sensitivity to market movements compared to Nvidia.
+  </p>    
+  <br>
+  <p class="explanation-text">
+    A beta greater than 1 suggests that a stock tends to be more volatile than the market. In this case, both Nvidia and Palantir have beta values greater than 1, indicating that they are expected to be more volatile and sensitive to market movements. Palantir’s higher beta value (1.85) compared to Nvidia’s (1.57) suggests that Palantir’s stock is estimated to have a higher degree of market sensitivity or risk compared to Nvidia.
+  </p>
+</div>
+
+<div class="col-lg-12" data-aos="fade-up">
+  <div class="code-container">
+    <div class="code-header">
+      <span class="code-title">Calculating beta values</span>
+    </div>
+    <pre class="code-block"><code class="language-python">#comparing the volatility of the pltr stock compared to that of the market ( s&p 500 )
+sp500_ticker = "^GSPC"
+market_data = yf.download(sp500_ticker, start_date, end_date)
+
+#caluculating daily returns for the "market" & its volatility
+market_data["Daily_return"] = market_data["Close"].pct_change()
+market_volatility = np.std(market_data["Daily_return"])
+
+#dropping na rows and putting the pltr, nvda and s&p500 return in one table
+aligned = pd.concat([palantir_data["Daily_return"],nvidia_data["Daily_return"] , market_data["Daily_return"]], axis=1).dropna()
+aligned.columns = ['pltr', 'nvda', 's&p']
+
+#calculating the beta value for the pltr stock compared to that of the market in the following period ( 01-06 until 15-09 ) 
+cov_pltr_market = np.cov( aligned['pltr'], aligned['s&p'] )
+beta_pltr = cov_pltr_market[0, 1] / (market_volatility ** 2 )
+
+#calculating the beta value for the pltr stock compared to that of the market in the following period ( 01-06 until 15-09 ) 
+cov_nvda_market = np.cov( aligned['nvda'], aligned['s&p'] )
+beta_nvda = cov_nvda_market[0, 1] / (market_volatility ** 2 )</code></pre>
+  </div>
+
+
+  
+</div>
+
+<section id="conclusion"></section>
+<div class="explanation-block" >
+  <h3 class="explanation-title" >Conclusion</h3>
+  <p class="explanation-text">
+This project demonstrates how Stock Market Comparison Analysis can be performed using Python. By analyzing and comparing Nvidia and Palantir’s recent stock performance against the market benchmark (S&P 500), I was able to evaluate their volatility, returns, and relative risk. Such analysis provides valuable insights into how different companies perform relative to each other and the broader market, helping investors and analysts make more informed financial decisions.
+ </p>
+</div>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container" id="contact">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">~/Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-github"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
